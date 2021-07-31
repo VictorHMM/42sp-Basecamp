@@ -1,13 +1,14 @@
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int counter;
+	unsigned int	counter;
 
 	counter = 0;
-	while(src[counter] != '\0' && counter < n)
+	while (src[counter] != '\0' && counter < n)
 	{
-		*dest[counter] = src[counter];
+		dest[counter] = src[counter];
 		counter++;
 	}
-	dest[counter] = src[counter];
+	while (counter < n)
+		dest[counter] = '\0';
 	return (dest);
 }
